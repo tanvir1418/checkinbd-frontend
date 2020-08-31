@@ -582,5 +582,81 @@ section{
         flex: 0 0 40%;
         margin-left: 2.5rem;
     }
-
 }   
+
+@media screen and (min-width: 1000px){
+    section:not(.booking){
+        padding: 10rem 0;
+    }
+
+    /* Header Section Styles */
+    .hamburger-menu{
+        display: none;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-item:not(:last-child){
+        margin-right: 3rem;
+        margin-bottom: 0;
+    }
+    .nav-link{
+        font-size: 1.3rem;
+        font-weight: normal;
+        transition: color .5s;
+    }
+    .nav-link:hover{
+        color: var(--yellow-solid);
+    }
+
+    /* Hero Section Styles */
+    .title{
+        font-size: 10rem;
+    }
+    .sub-title{
+        font-size: 4rem;
+    }
+    /* Booking Section Styles */
+    .book-form{
+        display: flex;
+        justify-content: space-between;
+    }
+    .book-form .input-group{
+        margin-bottom: 0;
+    }
+    .book-form .input-group:first-child{
+        flex: 0 0 20%;
+    }
+    .input,
+    .options{
+        min-width: 10rem;
+    }
+
+    /* Rooms Section Styles */
+    .rooms-grid{
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+        grid-gap: 8rem;
+    }
+    .featured-rooms{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .room-info-wrap{
+        margin-left: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .book-form .input-group:first-child{
+        flex: 0 0 30%;
+    }
+}
