@@ -63,8 +63,12 @@ section{
     left: 0;
     background-color: var(--purple-transparent);
     z-index: 999;
+    transition: background-color .5s, height .5s;
 }
 
+.header.active{
+    background-color: var(--purple-solid);
+}
 /* Header Styles nav */
 .nav{
     display: flex;
@@ -466,4 +470,48 @@ section{
 
 .contact-form .input:focus + .bar::after{
     transform: scaleX(1);
+}
+
+/* Footer section style  */
+.footer{
+    padding: 5rem 0;
+    background-color: var(--purple-solid);
+    color: #fff;
+}
+
+.footer-content-brand{
+    margin-bottom: 5rem;
+}
+
+.footer .paragraph{
+    color: inherit
+}
+
+.footer-heading{
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+}
+
+.social-media{
+    display: flex;
+}
+
+.sm-link{
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem;
+    border: 2px solid var(--yellow-solid);
+    border-radius: 50%;
+    display: flex;
+    margin-right: 1rem;
+    transition: background-color .5s;
+}
+
+.sm-link:hover{
+    background-color: var(--yellow-solid);
+    color: var(--dark-color);
+}
+
+.sm-link i{
+    margin: auto;
 }
