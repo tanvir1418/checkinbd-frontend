@@ -515,3 +515,72 @@ section{
 .sm-link i{
     margin: auto;
 }
+
+
+/* Media Queries */
+@media screen and (min-width: 786px){
+    /* Header section styles */
+    .header{
+        height: 8rem;
+    }
+    .header.active{
+        height: 6rem;
+    }
+    /* Hero section styles */
+    .title{
+        font-size: 8rem;
+    }
+    /* contact section styles */
+    .contact-content{
+        justify-content: space-between;
+    }
+    .traveler-wrap{
+        display: block;
+        flex: 0 0 45%;
+    }
+    .traveler-wrap img{
+        width: 100%;          /* 80% for 18 inch */
+
+    }
+    .contact-form{
+        flex: 0 0 50%;
+        align-self: flex-start;
+    }
+
+    .input-group-wrap{
+        display: flex;
+    }
+    
+    .input-group-wrap .input-group{
+        width: 50%;
+        margin-right: 2rem;
+    }
+
+    .input-group-wrap .input-group:last-child{
+        margin-right: 0;
+    }
+
+    /* Footer section styles */
+    .footer{
+        overflow-x: hidden;
+    }
+    .footer-content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-content-brand{
+        margin-bottom: 0;
+        flex: 0 0 60%;
+    }
+    .footer .paragraph{
+        margin-top: 2.5rem;
+    }
+    .footer-heading{
+        margin-bottom: 5rem;
+    }
+    .social-media-wrap{
+        flex: 0 0 40%;
+        margin-left: 2.5rem;
+    }
+
+}   
