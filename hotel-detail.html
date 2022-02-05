@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hotel Detail | Check In</title>
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/css/swiper.min.css" />
+    <link rel="stylesheet" href="src/css/hotel-detail.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="./index.html" class="logo">
+            <img src="src/images/logo.png" alt="" />
+          </a>
+          <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="booking">
+      <div class="booking-container">
+        <form action="" class="book-form">
+          <div class="input-group">
+            <label for="destination" class="input-label">Destination</label>
+            <input type="text" class="input" id="destination" />
+          </div>
+          <div class="input-group">
+            <label for="check-in" class="input-label">Check in</label>
+            <input type="date" class="input" id="check-in" />
+          </div>
+          <div class="input-group">
+            <label for="check-out" class="input-label">Check out</label>
+            <input type="date" class="input" id="check-out" />
+          </div>
+          <div class="input-group">
+            <label for="adults" class="input-label">Adults</label>
+            <select id="adults" class="options">
+              <option value="0">0</option>
+              <option value="0">1</option>
+              <option value="0">2</option>
+              <option value="0">3</option>
+              <option value="0">4</option>
+              <option value="0">5</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="children" class="input-label">Children</label>
+            <select id="children" class="options">
+              <option value="0">0</option>
+              <option value="0">1</option>
+              <option value="0">2</option>
+              <option value="0">3</option>
+              <option value="0">4</option>
+              <option value="0">5</option>
+            </select>
+          </div>
+          <button class="btn form-btn btn-purple">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 pb-0">
+          <div class="product__carousel">
+            <!-- Swiper and EazyLoad plugins start -->
+            <div class="swiper-container gallery-top">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-1.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-2.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-3.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-4.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-5.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-6.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-7.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-8.jpg" alt="" />
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a>
+                    <img src="src/images/hotel-10.jpg" alt="" />
+                  </a>
+                </div>
+              </div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next swiper-button-white"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-1.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-2.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-3.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-4.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-5.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-6.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-7.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-8.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-9.jpg" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="src/images/hotel-10.jpg" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- Swiper and EazyLoad plugins end -->
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 px-5 pt-3 pb-0">
+          <h3>
+            Hotel Sea Princess
+            <span class="star"
+              ><i class="fas fas-content fa-star"></i
+              ><i class="fas fas-content fa-star"></i
+              ><i class="fas fas-content fa-star"></i
+              ><i class="fas fas-content fa-star"></i
+              ><i class="far far-content fa-star"></i
+            ></span>
+          </h3>
+          <p class="location">
+            <i class="fas fa-map-marker-alt"></i> Inani Brach, Cox's Bazar
+          </p>
+
+          <div>
+            <p class="place-review">
+              <i class="fas fa-umbrella-beach"></i>
+              <strong>Location Status: 5/5</strong> (1300 Reviews)
+            </p>
+            <hr />
+            <span class="badge badge-primary use-for">Family</span>
+            <span class="badge badge-success use-for">Business</span>
+            <span class="badge badge-info use-for">Kid-Friendly</span>
+          </div>
+          <hr />
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Restaurant</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Breakfast</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> WiFi</span
+            >
+            <span class="facility"
+              ><i class="fas fas-content fa-fan"></i> AirConditioner</span
+            >
+          </div>
+          <hr />
+
+          <div class="Check-In-Out-Guest">
+            <div class="d-flex mt-2">
+              <div class="check-in-date mr-3">
+                <div class="container-checkIn d-flex">
+                  <span
+                    ><i class="fas fas-check-in fa-calendar-check"></i
+                  ></span>
+                  <div>
+                    <p class="text-muted title-check-guest">Check-In</p>
+                    <p class="title-date">09-09-2020</p>
+                  </div>
+                </div>
+              </div>
+              <div class="check-out-date">
+                <div class="container-checkOut d-flex">
+                  <span
+                    ><i class="fas fas-check-out fa-calendar-times"></i
+                  ></span>
+                  <div>
+                    <p class="text-muted title-check-guest">Check-Out</p>
+                    <p class="title-date">09-19-2020</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guest-info mt-2">
+              <div class="container-guest d-inline-flex">
+                <span><i class="fas fas-guest fa-users"></i></span>
+                <div>
+                  <p class="text-muted title-check-guest">Guests</p>
+                  <p class="title-date">
+                    <span class="adult">2</span> Adults,
+                    <span class="children">0 </span>Childrens
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="property-description">
+            <p class="content-property">
+              This property is 6 minutes walk from the beach. Featuring free
+              WiFi, a restaurant and a barbecue, Inani Royal Resort offers
+              accommodation in Ināni. The resort has a children's playground and
+              views of the sea, and guests can enjoy a meal at the restaurant.
+              Free private parking is available on site. Every room at this
+              resort is air conditioned and features a flat-screen TV. Some
+              rooms include a seating area for your convenience. Each room has a
+              private bathroom. For your comfort, you will find slippers and
+              free toiletries.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container room-container">
+      <div class="row wrapper mb-3">
+        <div class="col-md-3 imageContainer">
+          <img
+            class="img-fluid imageProps"
+            src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
+            alt=""
+          />
+          <span class="card-notify-brakefast"
+            >Breakfast <span style="font-size: 13px">Included</span></span
+          >
+        </div>
+
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-8 contentContainer">
+              <h3>Standard Twin</h3>
+              <hr />
+              <span class="mr-2 facility"
+                ><i class="fas fa-bed"></i> <strong>Double Bed</strong></span
+              >
+              <p class="place-review">
+                <i class="fas fa-restroom"></i>
+                <strong>Capacity: 2 Adults</strong>
+              </p>
+              <hr />
+              <div>
+                <span class="mr-2 policy"
+                  ><i class="fas fa-check-circle"></i> Free Cancellation</span
+                >
+              </div>
+              <div>
+                <span class="policy text-danger"
+                  ><i class="fas fa-times-circle"></i> Not Included: 15% VAT and
+                  Service Charge</span
+                >
+              </div>
+            </div>
+            <div
+              class="col-md-4 d-flex flex-column align-items-end discount-container"
+            >
+              <span class="card-notify-badge">50% Off</span>
+              <!-- <span class="discount text-muted">Tk 8000</span> -->
+              <p class="perNight">for 1 night</p>
+              <p class="roomPrice">
+                <span class="discount text-muted">Tk 8000</span
+                ><strong>Tk 4000</strong>
+              </p>
+              <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label class="label-room-no" for="">Number of Rooms: </label>
+                  <select class="form-control form-control-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </form>
+              <a
+                type="button"
+                class="btn btn-warning btn-sm mt-2"
+                href="./confirm-booking.html"
+                ><strong>Book Now</strong></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row wrapper mb-3">
+        <div class="col-md-3 imageContainer">
+          <img
+            class="img-fluid imageProps"
+            src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
+            alt=""
+          />
+          <span class="card-notify-brakefast"
+            >Breakfast <span style="font-size: 13px">Included</span></span
+          >
+        </div>
+
+        <div class="col-md-9">
+          <div class="row">
+            <div class="col-md-8 contentContainer">
+              <h3>Deluxe Twin</h3>
+              <hr />
+              <span class="mr-2 facility"
+                ><i class="fas fa-bed"></i> <strong>Double Bed</strong></span
+              >
+              <p class="place-review">
+                <i class="fas fa-restroom"></i>
+                <strong>Capacity: 2 Adults</strong>
+              </p>
+              <hr />
+              <div>
+                <span class="mr-2 policy"
+                  ><i class="fas fa-check-circle"></i> Free Cancellation</span
+                >
+              </div>
+              <div>
+                <span class="policy text-danger"
+                  ><i class="fas fa-times-circle"></i> Not Included: 15% VAT and
+                  Service Charge</span
+                >
+              </div>
+            </div>
+            <div
+              class="col-md-4 d-flex flex-column align-items-end discount-container"
+            >
+              <span class="card-notify-badge">50% Off</span>
+              <!-- <span class="discount text-muted">Tk 8000</span> -->
+              <p class="perNight">for 1 night</p>
+              <p class="roomPrice">
+                <span class="discount text-muted">Tk 8000</span
+                ><strong>Tk 4000</strong>
+              </p>
+              <form class="form-inline">
+                <div class="form-group mb-2">
+                  <label class="label-room-no" for="">Number of Rooms: </label>
+                  <select class="form-control form-control-sm">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </div>
+              </form>
+              <a
+                type="button"
+                class="btn btn-warning btn-sm mt-2"
+                href="./confirm-booking.html"
+                ><strong>Book Now</strong></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container container-features">
+      <h1>Features of Hotel Sea Princess</h1>
+      <hr />
+      <div class="features mb-3">
+        <div class="food-drink d-flex align-items-baseline">
+          <div class="mr-3">
+            <h6><strong>Food & Drinks:</strong></h6>
+          </div>
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Lunch & Dinner</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Breakfast</span
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="natural-view d-flex align-items-baseline">
+          <div class="mr-3">
+            <h6><strong>Natural views:</strong></h6>
+          </div>
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Beach view</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Sea View</span
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="services d-flex align-items-baseline">
+          <div class="mr-3">
+            <h6><strong>Services and conveniences:</strong></h6>
+          </div>
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Tour Guide</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Doctor</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> Newspaper</span
+            >
+            <span class="facility"
+              ><i class="fas fas-content fa-fan"></i> Transport Service</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Refrigerator</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> No Parking</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> Smoking Zone</span
+            >
+            <span class="facility"
+              ><i class="fas fas-content fa-fan"></i> Parking Area</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> 24/7 Front Desk</span
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="internet d-flex align-items-baseline">
+          <div class="mr-3">
+            <h6><strong>Internet:</strong></h6>
+          </div>
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> WiFi</span
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="room-features d-flex align-items-baseline">
+          <div class="mr-3">
+            <h6><strong>Room features:</strong></h6>
+          </div>
+          <div>
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Daily
+              Housekeeping</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-utensils"></i> Air Conditioner</span
+            >
+            <span class="mr-2 facility"
+              ><i class="fas fas-content fa-wifi"></i> Free toiletries</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="google-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7242.3525297282495!2d89.37634347697002!3d24.823645023840545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fc549501fa57e5%3A0x5b36673fc29ade28!2sColony%20Bazar!5e0!3m2!1sen!2sbd!4v1601197138867!5m2!1sen!2sbd"
+          width="1100"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        ></iframe>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-content-brand">
+            <a href="./index.html" class="logo">
+              <img src="./src/images/logo.png" alt="" class="logo-image" />
+            </a>
+            <div class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, dolorum!
+            </div>
+          </div>
+          <div class="social-media-wrap">
+            <h4 class="footer-heading">Follow us</h4>
+            <div class="social-media">
+              <a href="#" class="sm-link"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="src/js/swiper.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

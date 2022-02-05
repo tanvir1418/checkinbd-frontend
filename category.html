@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Checkin</title>
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="src/css/category.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="./index.html" class="logo">
+            <img src="src/images/logo.png" alt="" />
+          </a>
+          <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="booking">
+      <div class="booking-container">
+        <form action="" class="book-form">
+          <div class="input-group">
+            <label for="destination" class="input-label">Destination</label>
+            <input type="text" class="input" id="destination" />
+          </div>
+          <div class="input-group">
+            <label for="check-in" class="input-label">Check in</label>
+            <input type="date" class="input" id="check-in" />
+          </div>
+          <div class="input-group">
+            <label for="check-out" class="input-label">Check out</label>
+            <input type="date" class="input" id="check-out" />
+          </div>
+          <div class="input-group">
+            <label for="adults" class="input-label">Adults</label>
+            <select id="adults" class="options">
+              <option value="0">0</option>
+              <option value="0">1</option>
+              <option value="0">2</option>
+              <option value="0">3</option>
+              <option value="0">4</option>
+              <option value="0">5</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label for="children" class="input-label">Children</label>
+            <select id="children" class="options">
+              <option value="0">0</option>
+              <option value="0">1</option>
+              <option value="0">2</option>
+              <option value="0">3</option>
+              <option value="0">4</option>
+              <option value="0">5</option>
+            </select>
+          </div>
+          <button class="btn form-btn btn-purple">Search</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="container" style="margin-top: 20px; margin-bottom: 20px">
+      <div class="row">
+        <aside class="col-md-3 category-filter">
+          <div class="card">
+            <div class="mx-4 my-3">
+              <button class="btn btn-block btn-sm btn-danger p-1">
+                <span
+                  ><i class="fas fa-times-circle pr-1"></i> Clear
+                  Selection</span
+                >
+              </button>
+            </div>
+            <hr />
+            <div class="price-range-slider pb-0">
+              <h6 class="title text-muted pb-3">Price For 1 Night</h6>
+
+              <div id="slider-range" class="range-bar"></div>
+              <p class="range-value">
+                <input type="text" id="amount" readonly />
+              </p>
+            </div>
+
+            <hr />
+
+            <div class="card-body">
+              <div id="full-stars-example">
+                <h6 class="title text-muted mb-3">Star Rating</h6>
+                <div class="rating-group">
+                  <input
+                    class="rating__input rating__input--none"
+                    name="rating"
+                    id="rating-none"
+                    value="0"
+                    type="radio"
+                  />
+                  <label
+                    aria-label="No rating"
+                    class="rating__label"
+                    for="rating-none"
+                    ><i class="rating__icon rating__icon--none fa fa-ban"></i
+                  ></label>
+                  <label
+                    aria-label="1 star"
+                    class="rating__label"
+                    for="rating-1"
+                    ><i class="rating__icon rating__icon--star fa fa-star"></i
+                  ></label>
+                  <input
+                    class="rating__input"
+                    name="rating"
+                    id="rating-1"
+                    value="1"
+                    type="radio"
+                  />
+                  <label
+                    aria-label="2 stars"
+                    class="rating__label"
+                    for="rating-2"
+                    ><i class="rating__icon rating__icon--star fa fa-star"></i
+                  ></label>
+                  <input
+                    class="rating__input"
+                    name="rating"
+                    id="rating-2"
+                    value="2"
+                    type="radio"
+                  />
+                  <label
+                    aria-label="3 stars"
+                    class="rating__label"
+                    for="rating-3"
+                    ><i class="rating__icon rating__icon--star fa fa-star"></i
+                  ></label>
+                  <input
+                    class="rating__input"
+                    name="rating"
+                    id="rating-3"
+                    value="3"
+                    type="radio"
+                    checked
+                  />
+                  <label
+                    aria-label="4 stars"
+                    class="rating__label"
+                    for="rating-4"
+                    ><i class="rating__icon rating__icon--star fa fa-star"></i
+                  ></label>
+                  <input
+                    class="rating__input"
+                    name="rating"
+                    id="rating-4"
+                    value="4"
+                    type="radio"
+                  />
+                  <label
+                    aria-label="5 stars"
+                    class="rating__label"
+                    for="rating-5"
+                    ><i class="rating__icon rating__icon--star fa fa-star"></i
+                  ></label>
+                  <input
+                    class="rating__input"
+                    name="rating"
+                    id="rating-5"
+                    value="5"
+                    type="radio"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <article class="filter-group">
+              <div class="filter-content collapse show" id="collapse_1">
+                <div class="card-body">
+                  <h6 class="title text-muted mb-3">Property Type</h6>
+                  <label class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      checked=""
+                      class="custom-control-input"
+                    />
+                    <div class="custom-control-label">
+                      Hotel
+                      <b class="badge badge-pill badge-light float-right"
+                        >120</b
+                      >
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Guest House
+                      <b class="badge badge-pill badge-light float-right">15</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Serviced Apartment
+                      <b class="badge badge-pill badge-light float-right">35</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Villa
+                      <b class="badge badge-pill badge-light float-right">89</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Motel
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                </div>
+              </div>
+            </article>
+
+            <hr />
+
+            <article class="filter-group">
+              <div class="filter-content collapse show" id="collapse_2">
+                <div class="card-body">
+                  <h6 class="title text-muted mb-3">Amenities</h6>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      WiFi
+                      <b class="badge badge-pill badge-light float-right"
+                        >120</b
+                      >
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Wake up service
+                      <b class="badge badge-pill badge-light float-right">15</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Air Conditioner
+                      <b class="badge badge-pill badge-light float-right">35</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Tour Guide
+                      <b class="badge badge-pill badge-light float-right">89</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Free toiletries
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      24/7 Front Desk
+                      <b class="badge badge-pill badge-light float-right">15</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Parking Area
+                      <b class="badge badge-pill badge-light float-right">35</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Smoking Zone
+                      <b class="badge badge-pill badge-light float-right">89</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Daily Housekeeping
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Transport Service
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                </div>
+                <!-- card-body -->
+              </div>
+            </article>
+            <!-- filter-group -->
+            <hr />
+            <article class="filter-group">
+              <div class="filter-content collapse show" id="collapse_3">
+                <div class="card-body">
+                  <h6 class="title text-muted mb-3">Neighborhoods</h6>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Cox's Bazar
+                      <b class="badge badge-pill badge-light float-right"
+                        >120</b
+                      >
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Kalatoli
+                      <b class="badge badge-pill badge-light float-right">15</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Sea Inn Beach Point
+                      <b class="badge badge-pill badge-light float-right">35</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Inani Beach
+                      <b class="badge badge-pill badge-light float-right">89</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Teknaf
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                  <label class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" />
+                    <div class="custom-control-label">
+                      Laboni Point
+                      <b class="badge badge-pill badge-light float-right">30</b>
+                    </div>
+                  </label>
+                </div>
+                <!-- card-body -->
+              </div>
+            </article>
+            <!-- filter-group -->
+          </div>
+        </aside>
+
+        <main class="col-md-12 col-lg-9">
+          <div class="container mb-4">
+            <div class="row sort-filter">
+              <div class="col-xs-12 col-sm-7 col-md-7 col-lg-10 pl-0">
+                <p class="text-bold destination">Cox's Bazar</p>
+                <p class="text-muted destination-info">
+                  Thu, 24 Sep - Fri, 25 Sep (1 Night) | 2 Persons in 1 Room
+                </p>
+              </div>
+
+              <div
+                class="col-xs-12 col-sm-5 col-md-5 col-lg-2 pull-right text-right pt-2"
+              >
+                <button
+                  type="button"
+                  class="btn btn-sm btn-secondary mr-2 btn-filter"
+                  id="bottom-filter"
+                  data-toggle="modal"
+                  data-target="#filterModal"
+                >
+                  <i class="fas fa-filter"></i> Filter
+                </button>
+
+                <!-- Modal -->
+                <div
+                  class="modal fade"
+                  id="filterModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header py-1">
+                        <h6 class="modal-title" id="exampleModalLabel">
+                          Choose Category
+                        </h6>
+                        <button
+                          type="button"
+                          class="close"
+                          data-dismiss="modal"
+                          aria-label="Close"
+                        >
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+
+                      <div class="modal-body text-left" style="font-size: 14px">
+                        <div class="card">
+                          <div class="mx-4 my-2">
+                            <button class="btn btn-block btn-sm btn-danger p-1">
+                              <span
+                                ><i class="fas fa-times-circle pr-1"></i> Clear
+                                Selection</span
+                              >
+                            </button>
+                          </div>
+                          <hr />
+
+                          <div class="price-range-slider pb-0">
+                            <h6 class="title text-muted text-sm pb-1">
+                              Price For 1 Night
+                            </h6>
+
+                            <div id="slider-range" class="range-bar"></div>
+                            <p class="range-value">
+                              <input type="text" id="amount" />
+                            </p>
+                          </div>
+
+                          <hr />
+
+                          <div class="card-body">
+                            <div id="full-stars-example">
+                              <h6 class="title text-muted mb-3">Star Rating</h6>
+                              <div class="rating-group">
+                                <input
+                                  class="rating__input rating__input--none"
+                                  name="rating"
+                                  id="rating-none"
+                                  value="0"
+                                  type="radio"
+                                />
+                                <label
+                                  aria-label="No rating"
+                                  class="rating__label"
+                                  for="rating-none"
+                                  ><i
+                                    class="rating__icon rating__icon--none fa fa-ban"
+                                  ></i
+                                ></label>
+                                <label
+                                  aria-label="1 star"
+                                  class="rating__label"
+                                  for="rating-1"
+                                  ><i
+                                    class="rating__icon rating__icon--star fa fa-star"
+                                  ></i
+                                ></label>
+                                <input
+                                  class="rating__input"
+                                  name="rating"
+                                  id="rating-1"
+                                  value="1"
+                                  type="radio"
+                                />
+                                <label
+                                  aria-label="2 stars"
+                                  class="rating__label"
+                                  for="rating-2"
+                                  ><i
+                                    class="rating__icon rating__icon--star fa fa-star"
+                                  ></i
+                                ></label>
+                                <input
+                                  class="rating__input"
+                                  name="rating"
+                                  id="rating-2"
+                                  value="2"
+                                  type="radio"
+                                />
+                                <label
+                                  aria-label="3 stars"
+                                  class="rating__label"
+                                  for="rating-3"
+                                  ><i
+                                    class="rating__icon rating__icon--star fa fa-star"
+                                  ></i
+                                ></label>
+                                <input
+                                  class="rating__input"
+                                  name="rating"
+                                  id="rating-3"
+                                  value="3"
+                                  type="radio"
+                                  checked
+                                />
+                                <label
+                                  aria-label="4 stars"
+                                  class="rating__label"
+                                  for="rating-4"
+                                  ><i
+                                    class="rating__icon rating__icon--star fa fa-star"
+                                  ></i
+                                ></label>
+                                <input
+                                  class="rating__input"
+                                  name="rating"
+                                  id="rating-4"
+                                  value="4"
+                                  type="radio"
+                                />
+                                <label
+                                  aria-label="5 stars"
+                                  class="rating__label"
+                                  for="rating-5"
+                                  ><i
+                                    class="rating__icon rating__icon--star fa fa-star"
+                                  ></i
+                                ></label>
+                                <input
+                                  class="rating__input"
+                                  name="rating"
+                                  id="rating-5"
+                                  value="5"
+                                  type="radio"
+                                />
+                              </div>
+                            </div>
+                          </div>
+
+                          <hr />
+                          <div class="card-body">
+                            <h6 class="title text-muted mb-3">Property Type</h6>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                checked=""
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Hotel
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >120</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Guest House
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >15</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Serviced Apartment
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >35</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Villa
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >89</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Motel
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                          </div>
+                          <hr />
+                          <div class="card-body">
+                            <h6 class="title text-muted mb-3">Amenities</h6>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                WiFi
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >120</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Wake up service
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >15</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Air Conditioner
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >35</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Tour Guide
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >89</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Free toiletries
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                24/7 Front Desk
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >15</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Parking Area
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >35</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Smoking Zone
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >89</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Daily Housekeeping
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Transport Service
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                          </div>
+                          <hr />
+                          <div class="card-body">
+                            <h6 class="title text-muted mb-3">Neighborhoods</h6>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Cox's Bazar
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >120</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Kalatoli
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >15</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Sea Inn Beach Point
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >35</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Inani Beach
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >89</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Teknaf
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                            <label class="custom-control custom-checkbox">
+                              <input
+                                type="checkbox"
+                                class="custom-control-input"
+                              />
+                              <div class="custom-control-label">
+                                Laboni Point
+                                <b
+                                  class="badge badge-pill badge-light float-right"
+                                  >30</b
+                                >
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button
+                          type="button"
+                          class="btn btn-sm btn-secondary"
+                          data-dismiss="modal"
+                        >
+                          Close
+                        </button>
+                        <button type="button" class="btn btn-sm btn-warning">
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <select
+                  class="bg-warning"
+                  name="cars"
+                  id="cars"
+                  style="
+                    font-size: 14px;
+                    padding: 5px 4px;
+                    border-radius: 3px;
+                    border-style: none;
+                  "
+                >
+                  <option value="volvo">Sort By</option>
+                  <option value="saab">Lowest rate</option>
+                  <option value="opel">Highest rate</option>
+                  <option value="audi">Star</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row wrapper mb-2">
+              <div class="col-md-4 imageContainer">
+                <img
+                  class="img-fluid imageProps"
+                  src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
+                  alt=""
+                />
+                <span class="card-notify-badge">50% Off</span>
+              </div>
+              <div class="col-md-8 contentContainer">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>
+                      Hotel Sea Princess
+                      <span class="star"
+                        ><i class="fas fas-content fa-star"></i
+                        ><i class="fas fas-content fa-star"></i
+                        ><i class="fas fas-content fa-star"></i
+                        ><i class="fas fas-content fa-star"></i
+                        ><i class="far far-content fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="location">
+                      <i class="fas fas-content fa-map-marker-alt"></i> Inani
+                      Brach, Cox's Bazar
+                    </p>
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col-md-8">
+                    <div>
+                      <p class="place-review">
+                        <i class="fas fas-content fa-umbrella-beach"></i>
+                        <strong>Location Status: 5/5</strong> (1300 Reviews)
+                      </p>
+                      <hr />
+                      <span class="badge badge-primary use-for">Family</span>
+                      <span class="badge badge-success use-for">Business</span>
+                      <span class="badge badge-info use-for">Kid-Friendly</span>
+                    </div>
+                    <hr />
+                    <div>
+                      <span class="mr-2 facility"
+                        ><i class="fas fas-content fa-utensils"></i>
+                        Restaurant</span
+                      >
+                      <span class="mr-2 facility"
+                        ><i class="fas fas-content fa-utensils"></i>
+                        Breakfast</span
+                      >
+                      <span class="mr-2 facility"
+                        ><i class="fas fas-content fa-wifi"></i> WiFi</span
+                      >
+                      <span class="facility"
+                        ><i class="fas fas-content fa-fan"></i>
+                        AirConditioner</span
+                      >
+                    </div>
+
+                    <hr />
+                    <div>
+                      <span class="mr-2 policy"
+                        ><i class="fas fas-content fa-check-circle"></i> Free
+                        Cancellation</span
+                      >
+                    </div>
+                    <div>
+                      <span class="policy"
+                        ><i class="fas fas-content fa-times-circle"></i> Not
+                        Included: 15% VAT</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-md-4 d-flex flex-column align-items-end">
+                    <span class="border border-success saving-money"
+                      >Save <sup>TK</sup>4000</span
+                    >
+                    <p class="discount text-muted"><sup>TK</sup>8000</p>
+                    <p class="perNight">for 1 night</p>
+                    <p class="roomPrice">
+                      <strong><sup>TK</sup>4000</strong>
+                    </p>
+
+                    <a
+                      href="./hotel-detail.html"
+                      type="button"
+                      class="btn btn-warning btn-sm"
+                      ><strong>Choose Room</strong></a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="mt-4" aria-label="Page navigation sample">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="#">Previous</a>
+              </li>
+              <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+          </nav>
+        </main>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-content-brand">
+            <a href="./index.html" class="logo">
+              <img src="./src/images/logo.png" alt="" class="logo-image" />
+            </a>
+            <div class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, dolorum!
+            </div>
+          </div>
+          <div class="social-media-wrap">
+            <h4 class="footer-heading">Follow us</h4>
+            <div class="social-media">
+              <a href="#" class="sm-link"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

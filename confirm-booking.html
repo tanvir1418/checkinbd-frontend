@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Confirm Booking | Check In</title>
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="src/css/confirm-booking.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <a href="./index.html" class="logo">
+            <img src="src/images/logo.png" alt="" />
+          </a>
+          <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times"></i>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Offers</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 p-0">
+          <p class="confirm-heading">Confirm Your Booking</p>
+          <div class="confirm-booking">
+            <div class="row wrapper p-4">
+              <div class="col-md-4 imageContainer">
+                <img
+                  class="img-fluid imageProps"
+                  src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=753&q=80"
+                  alt=""
+                />
+                <span class="card-notify-brakefast"
+                  >Breakfast <span style="font-size: 12px">Included</span></span
+                >
+                <span class="card-notify-room-type">Deluxe Twin</span>
+              </div>
+
+              <div class="col-md-8 contentContainer">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h3>
+                      Hotel Sea Princess
+                      <span class="star"
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                        ><i class="far fa-star"></i
+                      ></span>
+                    </h3>
+                    <p class="location">
+                      <i class="fas fa-map-marker-alt"></i> Inani Brach, Cox's
+                      Bazar
+                    </p>
+                  </div>
+                </div>
+                <div class="row mt-2">
+                  <div class="col-md-6">
+                    <div class="Check-In-Out-Guest text-center">
+                      <div class="d-flex">
+                        <div class="check-in-date mr-3">
+                          <div class="container-checkIn">
+                            <p class="text-muted">Check-In</p>
+                            <hr />
+                            <p class="title-date">19</p>
+                            <p class="title-time">Oct | 11:00 am</p>
+                          </div>
+                        </div>
+                        <div class="check-out-date">
+                          <div class="container-checkOut">
+                            <p class="text-muted">Check-Out</p>
+                            <hr />
+                            <p class="title-date">25</p>
+                            <p class="title-time">Oct | 11:00 am</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 p-0">
+                    <div class="d-flex stay-in">
+                      <div class="col-6" style="margin: 0; padding: 0">
+                        <p class="room-no"><strong>1 Room</strong></p>
+                      </div>
+                      <div class="col-6" style="margin: 0; padding: 0">
+                        <a class="change-room-link" type="button" href=""
+                          >Change Room</a
+                        >
+                      </div>
+                    </div>
+                    <p class="night-days">
+                      <strong>11 Night & 12 Days</strong>
+                    </p>
+                    <hr class="designer-hr" />
+                    <p class="text-muted">Room Capacity:&nbsp; 2 Adults</p>
+                    <hr class="designer-hr" />
+                  </div>
+                </div>
+
+                <div class="row mt-2" id="inclusion">
+                  <div class="col-md-2">
+                    <p class="inclusion-title"><strong>Inclusion:</strong></p>
+                  </div>
+                  <div class="col-md-10">
+                    <span class="inclusion-txt"
+                      ><i class="fas fa-check-circle tick-mark style"></i>
+                      Breakfast</span
+                    >
+                    <span class="inclusion-txt"
+                      ><i class="fas fa-check-circle tick-mark"></i>
+                      Shower</span
+                    >
+                    <span class="inclusion-txt"
+                      ><i class="fas fa-check-circle tick-mark"></i>
+                      Television</span
+                    >
+                    <span class="inclusion-txt"
+                      ><i class="fas fa-check-circle tick-mark"></i> Air
+                      Conditione
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="policy">
+              <p class="cancel-heading">
+                <strong>Cancellation Policy:</strong>
+              </p>
+              <div class="policy-list">
+                <p class="text-muted">
+                  Before 7 days of checkin: FREE cancellation
+                </p>
+                <p class="text-muted">
+                  Within 7 days of checkin: full amount of the first night's
+                  charge
+                </p>
+                <p class="text-muted">
+                  Failure to arrive at the hotel or property will be treated as
+                  No-show and will incur the first night’s charge.
+                </p>
+                <p class="text-muted">
+                  During Blackout/Long Holidays period Cancellation policy will
+                  not be applicable.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="details-submission">
+            <p class="detail-heading">Enter Your Details</p>
+            <div class="submission-form">
+              <div class="form-details p-4">
+                <form>
+                  <div class="row mb-3">
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="First name"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Last name"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="col">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Mobile Number"
+                      />
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="form-request px-4 py-2">
+                <div class="form-group">
+                  <label
+                    class="special-req-title text-muted"
+                    for="special-request"
+                    >Special Request</label
+                  >
+                  <textarea
+                    class="form-control special-req-form"
+                    id="special-request"
+                    placeholder="e.g. I want a wheel chair"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="detail-submit text-center my-4">
+            <p class="m-2">By continuing, you will confirm your Booking.</p>
+            <button
+              type="button"
+              class="btn btn-success btn-lg text-center btn-design"
+            >
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <p class="tariff-heading">Tariff Details</p>
+          <div class="tariff-container" id="tariff_div">
+            <div class="row r-box">
+              <div class="tariff-upper">
+                <ul class="r-0">
+                  <li class="tariff-li">
+                    <span class="float-left pr">Hotel Charges</span>
+                    <span class="float-right pr" id="hotel-charge"
+                      >BDT 16,694.00</span
+                    >
+                  </li>
+                  <li class="tariff-li-total" style="font-size: 16px">
+                    <span class="float-left pr">Discount</span>
+                    <span class="float-right pr" id="discount"
+                      >BDT 9,849.54</span
+                    >
+                  </li>
+                  <div class="discount-list">
+                    <ul class="discount-ul">
+                      <li>
+                        <span class="float-left pr"
+                          >Hotel Offer
+                          <span id="hotel-discount">(59%)</span></span
+                        >
+                        <span class="float-right pr" id="hotel-offer"
+                          >BDT 9,849.54</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <li class="tariff-li sub-total-li">
+                    <span class="float-left pr">Sub Total</span>
+                    <span class="float-right pr" id="sub-total"
+                      >BDT 6,844.46</span
+                    >
+                  </li>
+                  <li class="tariff-li-total">
+                    <span class="float-left pr">Service Charge &amp; VAT</span>
+                    <span class="float-right pr" id="service-charge-vat"
+                      >BDT 2,207.34</span
+                    >
+                  </li>
+                  <div class="discount-list">
+                    <ul class="discount-ul">
+                      <li>
+                        <span class="float-left pr"
+                          >Service Charge <span>(15%)</span></span
+                        >
+                        <span class="float-right pr" id="service-charge"
+                          >BDT 1,026.67</span
+                        >
+                      </li>
+                      <li>
+                        <span class="float-left pr"
+                          >VAT <span>(15%)</span></span
+                        >
+                        <span class="float-right pr" id="vat"
+                          >BDT 1,180.67</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="tariff-lower">
+                <ul class="r-0">
+                  <li class="tariff-you-pay">
+                    <span class="float-left pr">You Pay</span>
+                    <span class="float-right pr total-pay" id="total"
+                      >BDT 9,051.80</span
+                    >
+                  </li>
+                  <li class="tariff-li total-savings-li">
+                    <span class="float-left pr mr-4">Total Savings:</span>
+                    <span class="float-right pr" id="savings"
+                      >BDT 13,026.02</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+        <div class="detail-submit text-center m-3">
+            <p class="m-2">By continuing, you will Confirmed your Booking.</p>
+            <button type="button" class="btn btn-success btn-lg text-center btn-design">Confirm Booking</button>
+        </div>
+    </div> -->
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-content-brand">
+            <a href="./index.html" class="logo">
+              <img src="./src/images/logo.png" alt="" class="logo-image" />
+            </a>
+            <div class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, dolorum!
+            </div>
+          </div>
+          <div class="social-media-wrap">
+            <h4 class="footer-heading">Follow us</h4>
+            <div class="social-media">
+              <a href="#" class="sm-link"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
